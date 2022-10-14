@@ -1,0 +1,36 @@
+form{
+    width: 80%;
+    padding: 0;
+    margin: 10% 10% 0 10%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+form div{
+    margin-bottom: 1%;
+}
+#email{
+    width: calc(100% - 42px);
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: normal;
+    font-family: inherit;
+}
+#text{
+    width: calc(100% - 42px);
+    min-height: 10vh;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 30px;
+    border: 1px solid #333;
+    font-family: inherit;
+}
+.button{
+    width: 100%;
+}
+#submit{
+    width: calc(20% - 8px);
+    height: 30px;
+    margin: 0 0 0 40%;
+    border-radius: 15px;
+}

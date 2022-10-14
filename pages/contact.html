@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/allPages.css">
+    <link rel="stylesheet" href="../style/contact.css">
+    <script src="https://kit.fontawesome.com/05e38db879.js" crossorigin="anonymous"></script>
+    <script src="https://api.mapy.cz/loader.js"></script>
+    <script>Loader.load()</script>
+    <title>Šití Pavlíčková</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li class="left" onclick="location.href='../index.html'">Šití péřových výrobků</li>
+            <li class="right">Kontakt</li>
+            <li class="right" onclick="location.href='pricing.html'">Ceník</li>
+            <li class="right" onclick="location.href='photogallery.html'">Fotogalerie</li>
+            <li class="right" onclick="location.href='order.html'">Objednávka</li>
+        </ul>
+    </header>
+
+    <main>
+        <h1>Pracovna</h1>
+        <div class="flex">
+            <div id="map" class="flexleft"></div>
+            <script>
+                var center = SMap.Coords.fromWGS84(15.8098333, 50.1050964);
+                var m = new SMap(JAK.gel("map"), center, 13);
+                m.addDefaultLayer(SMap.DEF_BASE).enable();
+                m.addDefaultControls();
+
+                var layer = new SMap.Layer.Marker();
+                m.addLayer(layer);
+                layer.enable();
+
+                var card = new SMap.Card();
+                card.getHeader().innerHTML = "<strong>Nadpis</strong>";
+                card.getBody().innerHTML = "Ahoj, já jsem <em>obsah vizitky</em>!";
+
+                var options = {};
+                var marker = new SMap.Marker(center, "myMarker", options);
+                marker.decorate(SMap.Marker.Feature.Card, card);
+                layer.addMarker(marker);     	      
+            </script>
+
+            <div class="flexright">
+                <div class="contactInfo">
+                    <div class="address">
+                        <p><strong>Adresa:</strong></p> 
+                        <p>Dříteč 135</p>
+                        <p>Dříteč 533 05</p>
+                    </div>
+                    <div class="contacts">
+                        <p><i class="fa-solid fa-square-phone"></i> 728 407 346</p>
+                        <p><i class="fa-solid fa-square-envelope"></i> alcapavlickova@seznam.cz</p>
+                        <p class="desc">(provoz telefonního čísla 8:00-16:00 každý všední den)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
