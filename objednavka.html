@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/allPages.css">
+    <link rel="stylesheet" href="style/order.css">
+    <script src="https://kit.fontawesome.com/05e38db879.js" crossorigin="anonymous"></script>
+    <title>Šití Pavlíčková</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="left" onclick="location.href='index.html'">Šití péřových výrobků</li>
+                <li class="right" onclick="location.href='kontakt.html'">Kontakt</li>
+                <li class="right" onclick="location.href='cenik.html'">Ceník</li>
+                <li class="right" onclick="location.href='fotogalerie.html'">Fotogalerie</li>
+                <li class="right">Objednávka</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form onsubmit="alert('Děkujeme za objednávku')">
+            <div>
+                <input id="email" type="email" placeholder="Zadejte e-mail" required/>
+            </div>
+            
+            <div class="textArea">
+                <textarea id="text" placeholder="Zde zadejte objednávku" required></textarea>
+            </div>
+            
+            <div class="button">
+                <input id="submit" type="submit" value="Odeslat objednávku">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="topFooter">
+            <div>
+                <h4>Navigace</h4>
+                <div class="column">
+                    <a href="index.html">Šití péřových výrobků</a>
+                    <a href="kontakt.html">Kontakt</a>
+                    <a href="cenik.html">Ceník</a>
+                    <a href="fotogalerie.html">Fotogalerie</a>
+                    <a href="objednavka.html">Objednávka</a>
+                </div>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <div class="contact">
+                    <p><i class="fa-solid fa-square-phone"></i> 728 407 346</p>
+                    <p><i class="fa-solid fa-square-envelope"></i> alcapavlickova@seznam.cz</p>
+                </div>
+                <p>Dříteč 135</p>
+                <p>Dříteč 533 05</p>
+            </div>
+        </div>
+        <hr/>
+        <div class="bottomFooter">
+            <p>© 2022 Marek Pavlíček, studentský projekt</p>
+            <p id="lastChange"></p>
+            <script>
+                let text = this.document.lastModified;
+                document.getElementById("lastChange").innerHTML = "Naposledy upraveno " + text;
+            </script>
+        </div>
+    </footer>
+</body>
+</html>

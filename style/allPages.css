@@ -1,8 +1,11 @@
 body{ 
+    display: flex; 
+    flex-direction: column; 
     margin: 0;
     background-color: #F8F0FB;
     color: #211A1D;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
 }
 header{
     width: 100%;
@@ -11,17 +14,48 @@ header{
     background-color: #6320EE;
     height: 5%;
 }
-footer{
-    position: absolute;
-    bottom: 0;
-    background-color: #211A1D;
-    min-height: 5%;
-    width: 100%;
+main{
+    flex: 1;
 }
-.footercontent{
+
+footer{
+    background-color: #211A1D;
+    color: #F8F0FB;
+    min-height: 5%;
+}
+footer p{
+    font-size: small;
+    margin: 0;
+    padding: 0;
+}
+footer a{
+    font-size: small;
+    text-decoration: none;
+    color: #F8F0FB;
+}
+footer hr{
+    width: 30%;
+    color: #F8F0D0;
+    opacity: 75%;
+}
+footer a:hover{
+    opacity: 50%;
+}
+footer .contact{
+    margin: 10px auto;
+}
+footer .column{
     display: flex;
-    height: 100%;
-    width: 100%;
+    flex-direction: column;
+}
+.topFooter{
+    display: flex;
+    justify-content: space-around;
+}
+.bottomFooter p{
+    text-align: center;
+    opacity: 50%;
+    margin-bottom: 5px;
 }
 
 ul {
@@ -57,12 +91,22 @@ li.right:hover{
     cursor: pointer;
 }
 
+@media screen and (max-width:1100px) {
+    footer hr{
+        width: 45%;
+    }
+}
+
+
 @media screen and (max-width:600px) {
    li.left{
     float: none;
    }
    li.right{
     float: none;
+   }
+   footer hr{
+    width: 65%;
    }
 }
 

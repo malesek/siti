@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/allPages.css">
-    <link rel="stylesheet" href="../style/contact.css">
+    <link rel="stylesheet" href="style/allPages.css">
+    <link rel="stylesheet" href="style/contact.css">
     <script src="https://kit.fontawesome.com/05e38db879.js" crossorigin="anonymous"></script>
     <script src="https://api.mapy.cz/loader.js"></script>
     <script>Loader.load()</script>
@@ -15,13 +15,15 @@
 
 <body>
     <header>
-        <ul>
-            <li class="left" onclick="location.href='../index.html'">Šití péřových výrobků</li>
-            <li class="right">Kontakt</li>
-            <li class="right" onclick="location.href='pricing.html'">Ceník</li>
-            <li class="right" onclick="location.href='photogallery.html'">Fotogalerie</li>
-            <li class="right" onclick="location.href='order.html'">Objednávka</li>
-        </ul>
+        <nav>
+            <ul>
+                <li class="left" onclick="location.href='index.html'">Šití péřových výrobků</li>
+                <li class="right">Kontakt</li>
+                <li class="right" onclick="location.href='cenik.html'">Ceník</li>
+                <li class="right" onclick="location.href='fotogalerie.html'">Fotogalerie</li>
+                <li class="right" onclick="location.href='objednavka.html'">Objednávka</li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -51,7 +53,7 @@
             <div class="flexright">
                 <div class="contactInfo">
                     <div class="address">
-                        <p><strong>Adresa:</strong></p> 
+                        <p><strong>Adresa:</strong></p>
                         <p>Dříteč 135</p>
                         <p>Dříteč 533 05</p>
                     </div>
@@ -64,6 +66,38 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div class="topFooter">
+            <div>
+                <h4>Navigace</h4>
+                <div class="column">
+                    <a href="index.html">Šití péřových výrobků</a>
+                    <a href="kontakt.html">Kontakt</a>
+                    <a href="cenik.html">Ceník</a>
+                    <a href="fotogalerie.html">Fotogalerie</a>
+                    <a href="objednavka.html">Objednávka</a>
+                </div>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <div class="contact">
+                    <p><i class="fa-solid fa-square-phone"></i> 728 407 346</p>
+                    <p><i class="fa-solid fa-square-envelope"></i> alcapavlickova@seznam.cz</p>
+                </div>
+                <p>Dříteč 135</p>
+                <p>Dříteč 533 05</p>
+            </div>
+        </div>
+        <hr/>
+        <div class="bottomFooter">
+            <p>© 2022 Marek Pavlíček, studentský projekt</p>
+            <p id="lastChange"></p>
+            <script>
+                let text = this.document.lastModified;
+                document.getElementById("lastChange").innerHTML = "Naposledy upraveno " + text;
+            </script>
+        </div>
+    </footer>
 </body>
 
 </html>

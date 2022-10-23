@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/allPages.css">
-    <link rel="stylesheet" href="../style/pricing.css">
+    <link rel="stylesheet" href="style/allPages.css">
+    <link rel="stylesheet" href="style/pricing.css">
+    <script src="https://kit.fontawesome.com/05e38db879.js" crossorigin="anonymous"></script>
     <title>Šití Pavlíčková</title>
 </head>
 <body>
     <header>
-        <ul>
-            <li class="left" onclick="location.href='../index.html'">Šití péřových výrobků</li>
-            <li class="right" onclick="location.href='contact.html'">Kontakt</li>
-            <li class="right">Ceník</li>
-            <li class="right" onclick="location.href='photogallery.html'">Fotogalerie</li>
-            <li class="right" onclick="location.href='order.html'">Objednávka</li>
-        </ul>
+        <nav>
+            <ul>
+                <li class="left" onclick="location.href='index.html'">Šití péřových výrobků</li>
+                <li class="right" onclick="location.href='kontakt.html'">Kontakt</li>
+                <li class="right">Ceník</li>
+                <li class="right" onclick="location.href='fotogalerie.html'">Fotogalerie</li>
+                <li class="right" onclick="location.href='objednavka.html'">Objednávka</li>
+            </ul>
+        </nav>
     </header>
     <main>
+        <h2>Výrobky z vašeho peří</h2>
         <table>
             <thead>
                 <tr>
@@ -80,7 +84,8 @@
                 </tr>
             </tbody>
         </table>
-
+        
+        <h2>Výrobky čistě z mého materiálu</h2>
         <table>
             <thead>
                 <tr>
@@ -100,7 +105,7 @@
                     <td>135x220</td>
                     <td>1700Kč</td>
                 </tr>
-                <tr class="middle">
+                <tr class="middle section">
                     <td>Deka dětská</td>
                     <td>90x130</td>
                     <td>600Kč</td>
@@ -142,10 +147,6 @@
                 </tr>
             </tbody>
         </table>
-        <h2>Čištění peří</h2>
-        <p>Cena za čištění peří je 70Kč/kg, přičemž se počítá původní hmotnost</p>
-        <h2>Prodej peří</h2>
-        <p><strong>drané peři standart</strong> 360Kč/kg</p>
         <h2>Hmotnosti náplní výrobků</h2>
         <table>
             <thead>
@@ -173,6 +174,42 @@
                 </tr>
             </tbody>
         </table>
+        <h2>Čištění peří</h2>
+        <p>Cena za čištění peří je <strong>70Kč/kg</strong>, přičemž se počítá původní hmotnost</p>
+        <h2>Prodej peří</h2>
+        <p class="last">drané peří standart <strong>360Kč/kg</strong></p>
     </main>
+    <footer>
+        <div class="topFooter">
+            <div>
+                <h4>Navigace</h4>
+                <div class="column">
+                    <a href="index.html">Šití péřových výrobků</a>
+                    <a href="kontakt.html">Kontakt</a>
+                    <a href="cenik.html">Ceník</a>
+                    <a href="fotogalerie.html">Fotogalerie</a>
+                    <a href="objednavka.html">Objednávka</a>
+                </div>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <div class="contact">
+                    <p><i class="fa-solid fa-square-phone"></i> 728 407 346</p>
+                    <p><i class="fa-solid fa-square-envelope"></i> alcapavlickova@seznam.cz</p>
+                </div>
+                <p>Dříteč 135</p>
+                <p>Dříteč 533 05</p>
+            </div>
+        </div>
+        <hr/>
+        <div class="bottomFooter">
+            <p>© 2022 Marek Pavlíček, studentský projekt</p>
+            <p id="lastChange"></p>
+            <script>
+                let text = this.document.lastModified;
+                document.getElementById("lastChange").innerHTML = "Naposledy upraveno " + text;
+            </script>
+        </div>
+    </footer>
 </body>
 </html>
